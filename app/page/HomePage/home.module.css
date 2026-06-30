@@ -1,0 +1,28 @@
+.section {
+  text-align: center;
+}
+.image {
+  margin: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+  padding: 10px;
+}
+.description {
+  font-size: 30px;
+}
+
+.section2 {
+  display: flex;
+  justify-content: center;
+}
+
+.section3 {
+  background: #efefef;
+  text-align: center;
+  padding: 20px;
+}
+
+.h1 {
+  font-size: 30px;
+  margin: 20px;
+}

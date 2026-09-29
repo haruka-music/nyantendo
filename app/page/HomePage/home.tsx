@@ -1,13 +1,14 @@
 import React from "react";
 import Styles from "../HomePage/home.module.css";
 import Image from "next/image";
-import HomeImage from "@/public/image/nyantendo/Nyantendo.png";
-import nyarby1 from "@/public/image/nyantendo/nyarby1.png";
-import nyalda from "@/public/image/nyantendo/nyalda.png";
-import vio from "@/public/image/nyantendo/vio.png";
-import craft from "@/public/image/nyantendo/craft.png";
-import nyario from "@/public/image/nyantendo/nyario.png";
 import { Link } from "react-router-dom";
+
+const HomeImage = "/images/logo/Nyantendo.png";
+const nyarby1 = "/images/nyarby/nyarby1.png";
+const nyalda = "/images/nyalda/nyalda.png";
+const vio = "/images/vio/vio.png";
+const craft = "/images/craft/craft.png";
+const nyario = "/images/nyario.png";
 
 const home = () => {
   return (

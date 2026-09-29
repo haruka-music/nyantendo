@@ -1,0 +1,80 @@
+.formContainer {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 41%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+
+.h1 {
+  text-align: center;
+}
+
+.form {
+  background-color: #f8ecec;
+  width: 70%;
+  max-width: 450px;
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid #dfdfdf;
+  box-shadow: 11px 15px 19px 2px rgba(0, 0, 0, 0.54);
+  -webkit-box-shadow: 11px 15px 19px 2px rgba(0, 0, 0, 0.54);
+  -moz-box-shadow: 11px 15px 19px 2px rgba(0, 0, 0, 0.54);
+}
+
+.uiForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 400px;
+}
+
+.formField {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.formField input {
+  border: 1px solid #a9a9a9;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+.label {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+
+.submitButton {
+  background-color: #008b8b;
+  width: 100%;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 30px;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2;
+}
+
+.submitButton:hover {
+  background-color: #5f9ea0;
+  box-shadow: 8px 8px 19px 2px rgba(0, 0, 0, 0.54);
+  -webkit-box-shadow: 8px 8px 19px 2px rgba(0, 0, 0, 0.54);
+  -moz-box-shadow: 8px 8px 19px 2px rgba(0, 0, 0, 0.54);
+}
+
+.a {
+  text-decoration: none;
+}

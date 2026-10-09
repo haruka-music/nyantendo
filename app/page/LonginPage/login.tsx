@@ -1,42 +1,104 @@
 import React from "react";
 import Styles from "@/app/page/LonginPage/Login.module.css";
-import Image from "next/image";
 import { Link } from "react-router-dom";
 
-const Login = "/images/longin/login.png";
-
 const LoginPage = () => {
+  const [passwordVisible, setPasswordVisible] = React.useState(false);
+
   return (
-    <div className={Styles.formContainer}>
-      <Image src={Login} width={800} height={400} alt="main" />
-      <form className={Styles.form}>
-        <h1 className={Styles.h1}>ログインフォーム</h1>
-        <hr />
-        <div className={Styles.uiForm}>
+    <main className={Styles.page}>
+      <header className={Styles.brand} aria-label="Nyantendo">
+        <span className={Styles.brandPaw} aria-hidden="true">
+          🐾
+        </span>
+        <span className={Styles.brandName}>NYANTENDO</span>
+        <span className={Styles.brandPaw} aria-hidden="true">
+          🐾
+        </span>
+      </header>
+
+      <section className={Styles.panel} aria-labelledby="login-title">
+        <h1 className={Styles.welcome} id="login-title">
+          ログインして、NYANTENDOの世界へ
+        </h1>
+        <form className={Styles.form}>
           <div className={Styles.formField}>
-            <label className={Styles.label}>Name</label>
-            <input type="text" placeholder="ユーザー名" name="username" />
+            <label className={Styles.label} htmlFor="account">
+              ユーザー名/メールアドレス
+            </label>
+            <div className={Styles.inputWrap}>
+              <span className={Styles.inputIcon} aria-hidden="true">
+                🐾
+              </span>
+              <input
+                className={Styles.input}
+                id="account"
+                type="text"
+                autoComplete="username"
+                name="account"
+              />
+            </div>
           </div>
+
           <div className={Styles.formField}>
-            <label className={Styles.label}>Email</label>
-            <input
-              type="text"
-              placeholder="メールアドレス"
-              name="mailAddress"
-            />
+            <label className={Styles.label} htmlFor="password">
+              パスワード
+            </label>
+            <div className={Styles.inputWrap}>
+              <span className={Styles.inputIcon} aria-hidden="true">
+                🔑
+              </span>
+              <input
+                className={Styles.input}
+                id="password"
+                type={passwordVisible ? "text" : "password"}
+                autoComplete="current-password"
+                name="password"
+              />
+              <button
+                className={Styles.visibilityButton}
+                type="button"
+                aria-label={
+                  passwordVisible ? "パスワードを隠す" : "パスワードを表示"
+                }
+                aria-pressed={passwordVisible}
+                onClick={() => setPasswordVisible(!passwordVisible)}
+              >
+                {passwordVisible ? "◉" : "⊘"}
+              </button>
+            </div>
+            <p className={Styles.forgotPassword}>パスワードを忘れましたか？</p>
           </div>
-          <div className={Styles.formField}>
-            <label className={Styles.label}>Password</label>
-            <input type="text" placeholder="パスワード" name="password" />
+
+          <Link className={Styles.submitButton} to="/home">
+            <span aria-hidden="true">🐾</span>
+            ログイン
+          </Link>
+          <div className={Styles.accountLinks}>
+            <span>新規登録</span>
+            <Link to="/home">ゲストとして利用</Link>
           </div>
-          <button className={Styles.submitButton}>
-            <Link className={Styles.a} to="Home">
-              <a>ログイン</a>
-            </Link>
-          </button>
+        </form>
+      </section>
+
+      <footer className={Styles.footer}>
+        <div className={Styles.footerMessages}>
+          <span className={Styles.onlineDot} aria-hidden="true" />
+          <span>みんなのひとこと</span>
+          <span className={Styles.messageDivider} aria-hidden="true">
+            ·
+          </span>
+          <span>今日もゆっくりしていってね</span>
         </div>
-      </form>
-    </div>
+        <div className={Styles.footerBrand}>
+          <span aria-hidden="true">🐾</span> NYANTENDO
+        </div>
+        <div className={Styles.language}>
+          <span aria-hidden="true">◎</span> English{" "}
+          <span aria-hidden="true">⌄</span>
+        </div>
+      </footer>
+    </main>
   );
 };
 
